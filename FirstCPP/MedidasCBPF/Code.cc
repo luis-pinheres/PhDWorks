@@ -18,7 +18,7 @@
 
      // open file to read
        ifstream inFile;
-       inFile.open("raw_00000001_0001_1495054629.dat");
+       inFile.open("/home/luis/Documentos/UEL/PIETROCHIMENTI/MedidasCBPF/programas/raw_00000001_0001_1495054629.dat");
            if(!inFile.good()) cout << " File not open! " << endl;
 
 //indica la columna a leer        
