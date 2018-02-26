@@ -10,7 +10,7 @@ LDFLAGS= `root-config --ldflags`
 
 default: all
 
-all: MyFirstHistogram EXAMPLE1 Code 
+all: MyFirstHistogram EXAMPLE1 Code solution 
 
 MyFirstHistogram: MyFirstHistogram.cc
 	g++ -g -Wall `root-config --cflags --libs` -L$(ROOTSYS)/lib $(ROOTLIBS) $? -o  $@ 
@@ -18,11 +18,15 @@ MyFirstHistogram: MyFirstHistogram.cc
 
 EXAMPLE1: EXAMPLE1.cc
 	g++ -g -Wall `root-config --cflags --libs` -L$(ROOTSYS)/lib $(ROOTLIBS) $? -o $@
+
 Code: Code.cc
 	g++ -g -Wall `root-config --cflags --libs` -L$(ROOTSYS)/lib $(ROOTLIBS) $? -o $@
 
+solution: solution.cpp
+	g++ -g -Wall `root-config --cflags --libs` -L$(ROOTSYS)/lib $(ROOTLIBS) $? -o $@
+
 clean:  
-	$(RM) MyFirstHistogram EXAMPLE1 Code 
+	$(RM) MyFirstHistogram EXAMPLE1 Code solution
 
 
        
